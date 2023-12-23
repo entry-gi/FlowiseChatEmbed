@@ -203,7 +203,7 @@ export const Bot = (props: BotProps & { class?: string }) => {
 
   const promptClick = (prompt: string) => {
     handleSubmit(prompt);
-  }
+  };
 
   // Handle form submission
   const handleSubmit = async (value: string) => {
@@ -333,11 +333,11 @@ export const Bot = (props: BotProps & { class?: string }) => {
     });
 
     if (result.data) {
-      const chatbotConfig = result.data
+      const chatbotConfig = result.data;
       if (chatbotConfig.starterPrompts) {
-        const prompts: string[] = []
+        const prompts: string[] = [];
         Object.getOwnPropertyNames(chatbotConfig.starterPrompts).forEach((key) => {
-          prompts.push(chatbotConfig.starterPrompts[key].prompt)
+          prompts.push(chatbotConfig.starterPrompts[key].prompt);
         });
         setStarterPrompts(prompts);
       }
@@ -509,15 +509,8 @@ export const Bot = (props: BotProps & { class?: string }) => {
         </div>
         <Show when={messages().length === 1}>
           <Show when={starterPrompts().length > 0}>
-            <div style={{ display: 'flex', 'flex-direction': 'row', padding: '10px', width: '100%', "flex-wrap": 'wrap' }}>
-              <For each={[...starterPrompts()]}>
-                {(key) => (
-                  <StarterPromptBubble
-                    prompt={key}
-                    onPromptClick={() => promptClick(key)}
-                  />
-                )}
-              </For>
+            <div style={{ display: 'flex', 'flex-direction': 'row', padding: '10px', width: '100%', 'flex-wrap': 'wrap' }}>
+              <For each={[...starterPrompts()]}>{(key) => <StarterPromptBubble prompt={key} onPromptClick={() => promptClick(key)} />}</For>
             </div>
           </Show>
         </Show>
