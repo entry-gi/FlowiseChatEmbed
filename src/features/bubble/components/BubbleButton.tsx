@@ -15,8 +15,7 @@ const defaultBottom = '20';
 const defaultRight = '20';
 
 export const BubbleButton = (props: Props) => {
-
-  props.avatarText = "Hello! Airis here."
+  props.avatarText = 'Hello! Airis here.';
 
   return (
     <button
