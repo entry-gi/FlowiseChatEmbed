@@ -45,24 +45,34 @@ pre {
   margin: 5px;
   width: auto;
   overflow: auto;
-  white-space: pre-wrap; /* css-3 */
-  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
-  white-space: -pre-wrap; /* Opera 4-6 */
-  white-space: -o-pre-wrap; /* Opera 7 */
-  word-wrap: break-word; /* Internet Explorer 5.5+ */
+  white-space: pre-wrap;
+  /* css-3 */
+  white-space: -moz-pre-wrap;
+  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;
+  /* Opera 4-6 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  word-wrap: break-word;
+  /* Internet Explorer 5.5+ */
 }
+
 .string {
   color: green;
 }
+
 .number {
   color: darkorange;
 }
+
 .boolean {
   color: blue;
 }
+
 .null {
   color: magenta;
 }
+
 .key {
   color: rgb(0, 43, 54);
 }
@@ -74,8 +84,10 @@ pre {
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .scrollable-container {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 .text-fade-in {
@@ -113,9 +125,11 @@ pre {
   0% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-5px);
   }
+
   100% {
     transform: translateY(0);
   }
@@ -131,7 +145,7 @@ textarea {
   text-decoration: underline;
 }
 
-.slate-html-container > div {
+.slate-html-container>div {
   min-height: 24px;
 }
 
@@ -151,10 +165,12 @@ textarea {
   color: #9095a0 !important;
   opacity: 1 !important;
 }
+
 .text-input::-moz-placeholder {
   color: #9095a0 !important;
   opacity: 1 !important;
 }
+
 .text-input::placeholder {
   color: #9095a0 !important;
   opacity: 1 !important;
@@ -202,7 +218,7 @@ textarea {
   background-color: #f7f8ff;
 }
 
-.chatbot-host-bubble > .bubble-typing {
+.chatbot-host-bubble>.bubble-typing {
   background-color: #f7f8ff;
   border: var(--chatbot-host-bubble-border);
   border-radius: 6px;
@@ -231,7 +247,7 @@ textarea {
   color: #303235;
 }
 
-.chatbot-button > .send-icon {
+.chatbot-button>.send-icon {
   fill: var(--chatbot-button-color);
 }
 
@@ -348,6 +364,7 @@ textarea {
   0% {
     background-position: -100% 0;
   }
+
   100% {
     background-position: 100% 0;
   }
@@ -362,6 +379,7 @@ textarea {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -432,4 +450,66 @@ input {
   border: none;
   padding: 10px 10px;
   font-family: 'Poppins', sans-serif;
+}
+
+.x-message-popup {
+  width: 100px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  /* or any desired color */
+  border: 1px solid #ddd;
+  /* slight border */
+  position: relative;
+  /* for absolute positioning of the red dot */
+}
+
+.x-profile-pic {
+  width: 30px;
+  /* adjust as needed */
+  height: 30px;
+  /* adjust as needed */
+  border-radius: 50%;
+  /* circular profile pictures */
+  margin-left: 5px;
+}
+
+.x-message-content {
+  flex-grow: 1;
+  padding-left: 5px;
+}
+
+.x-person-name {
+  font-weight: bold;
+  display: block;
+  /* ensure name and message are on separate lines */
+}
+
+.x-message {
+  font-size: 0.8em;
+}
+
+.x-red-dot {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  /* circular dot */
+  position: absolute;
+  top: 2px;
+  /* adjust as needed */
+  right: 2px;
+  /* adjust as needed */
+}
+
+.avatar-text {
+  width: 230px;
+  height: 60px;
+  padding: 14px;
+  background-color: #f7f8ff;
+  border-radius: 10px;
+  font-weight: bold;
+  position: absolute;
+  left: -485%;
 }

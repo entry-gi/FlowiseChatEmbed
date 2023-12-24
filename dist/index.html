@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flowise Chat Embed</title>
+</head>
+
+<body>
+    <div id="app"><!-- This is where your React app will mount --></div>
+    <script type="module">
+        import Chatbot from "/web.js"
+        Chatbot.init({
+            chatflowid: "6c1b12ed-ff2b-42ff-9dc9-ecfb3ec693f6",
+            apiHost: "https://flowise-4xbd.onrender.com",
+            theme: {
+                button: { customIconSrc: "https://i.imgur.com/uZJR4xN.jpg", }
+            }
+        })
+    </script>
+</body>
+
+</html>

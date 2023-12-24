@@ -5,6 +5,8 @@ import { ButtonTheme } from '../types';
 type Props = ButtonTheme & {
   isBotOpened: boolean;
   toggleBot: () => void;
+
+  avatarText?: string;
 };
 
 const defaultButtonColor = '#3B81F6';
@@ -13,6 +15,9 @@ const defaultBottom = '20';
 const defaultRight = '20';
 
 export const BubbleButton = (props: Props) => {
+
+  props.avatarText = "Hello! Airis here."
+
   return (
     <button
       part="button"
@@ -53,6 +58,7 @@ export const BubbleButton = (props: Props) => {
           }
           alt="Bubble button icon"
         />
+        {!props.isBotOpened && <span class="avatar-text">Airis: looks like hard stuffs are done, Congrats!</span>}
       </Show>
 
       <svg
